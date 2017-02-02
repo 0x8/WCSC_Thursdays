@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Try to call this function
+// Hint: gdb eipret
 void winner()
 {
     printf("Congrats! You just hijacked EIP!\n");
@@ -7,9 +9,17 @@ void winner()
     return;
 }
 
+// Vulnerable function
+void vuln() 
+{
+	char buf[100];
+    scanf("%s", buf);
+	return;
+}
+
+
 int main()
 {
-    char buf[10];
-    scanf("%s", buf);
+    vuln(); 
     return 0;
 }
